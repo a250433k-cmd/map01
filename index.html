@@ -30,7 +30,7 @@
 			container: 'map',  // 地図を表示する要素のID
 			style: 'https://demotiles.maplibre.org/style.json',  // 地図のデザイン（背景地図）
 			center: [139.7671, 35.6812],  // 初期表示の中心座標 [経度, 緯度]（東京駅）
-			zoom: 8  // 初期ズームレベル（数字が大きいほど拡大）
+			zoom: 4  // 初期ズームレベル（数字が大きいほど拡大）
 		});
 
 		// ===== ナビゲーションコントロールの追加 =====
@@ -40,44 +40,47 @@
 		// ===== マーカーの追加 =====
 		// 地図上にピンを立てる
 		new maplibregl.Marker()
-			
-	      .setLngLat([139.5250, 35.3758])  // マーカーの位置 [経度, 緯度]（東京駅）
+			.setLngLat([139.6347, 35.8464])  // マーカーの位置 [経度, 緯度]
 			.setPopup(
-				
 				// マーカーをクリックしたときに表示されるポップアップ
 				new maplibregl.Popup()
-					.setHTML("<h3>Tokyo Disney Land</h3><p>Welcome to Tokyo Disney Resort!</p>")  // ポップアップの内容（HTML形式）
+					.setHTML("<h3>西浦和</h3><p>Hello MapLibre!</p>")  // ポップアップの内容（HTML形式）
+			)
+            .setLngLat([139.6806, 35.9395])  // マーカーの位置 [経度, 緯度]
+			.setPopup(
+				// マーカーをクリックしたときに表示されるポップアップ
+				new maplibregl.Popup()
+					.setHTML("<h3>東門前店</h3><p>Hello MapLibre!</p>")  // ポップアップの内容（HTML形式）
+			)
+            .setLngLat([139.7671, 35.6812])  // マーカーの位置 [経度, 緯度]（東京駅）
+			.setPopup(
+				// マーカーをクリックしたときに表示されるポップアップ
+				new maplibregl.Popup()
+					.setHTML("<h3>Tokyo Station</h3><p>Hello MapLibre!</p>")  // ポップアップの内容（HTML形式）
+			)
+            .setLngLat([139.7671, 35.6812])  // マーカーの位置 [経度, 緯度]（東京駅）
+			.setPopup(
+				// マーカーをクリックしたときに表示されるポップアップ
+				new maplibregl.Popup()
+					.setHTML("<h3>Tokyo Station</h3><p>Hello MapLibre!</p>")  // ポップアップの内容（HTML形式）
+			)
+            .setLngLat([139.7671, 35.6812])  // マーカーの位置 [経度, 緯度]（東京駅）
+			.setPopup(
+				// マーカーをクリックしたときに表示されるポップアップ
+				new maplibregl.Popup()
+					.setHTML("<h3>Tokyo Station</h3><p>Hello MapLibre!</p>")  // ポップアップの内容（HTML形式）
+			)
+            .setLngLat([139.7671, 35.6812])  // マーカーの位置 [経度, 緯度]（東京駅）
+			.setPopup(
+				// マーカーをクリックしたときに表示されるポップアップ
+				new maplibregl.Popup()
+					.setHTML("<h3>Tokyo Station</h3><p>Hello MapLibre!</p>")  // ポップアップの内容（HTML形式）
 			)
 			.addTo(map);  // 作成したマーカーを地図に追加
 
-
-			const locations = [
-			{ lng: 139.5304, lat: 35.3734, name: "Tokyo Disney Sea" },
-			{ lng: 139.5250, lat: 35.3758, name: "Tokyo Disney Land" },	
-			{ lng: 139.763769, lat: 35.676628, name: "東京国際フォーラム" },
-			{ lng: 139.645883, lat: 35.745548, name: "ハリーポッタースタジオツアー" }
-			];
-
-
-
-			locations.forEach(loc => {
-			new maplibregl.Marker()
-				.setLngLat([loc.lng, loc.lat])
-				.setPopup(
-				new maplibregl.Popup().setHTML(`<h3>${loc.name}</h3>`)
-				)
-				.addTo(map);
-			});
-
-
-
-
-
-
-
 	</script>
+
 
 </body>
 
 </html>
-
